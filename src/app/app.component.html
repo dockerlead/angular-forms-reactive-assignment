@@ -12,6 +12,10 @@
             type="text"
             id="projectName">
         </div>
+        <span
+          *ngIf="!projectForm.get('projectName').valid && projectForm.get('projectName').touched"
+          class="help-block">Please enter a valid project name!
+        </span>
         <div class="form-group">
           <label for="email">Email: </label>
           <input
