@@ -1,11 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <form>
+      <form
+        [formGroup]="projectForm"
+        (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="projectName">Project Name: </label>
           <input
             class="form-control"
+            formControlName="projectName"
             type="text"
             id="projectName">
         </div>
@@ -13,6 +16,7 @@
           <label for="email">Email: </label>
           <input
             class="form-control"
+            formControlName="email"
             type="text"
             id="email">
         </div>
@@ -21,6 +25,7 @@
           <select
             id="projectStatus"
             class="form-control"
+            formControlName="projectStatus"
             name="projectStatus">
             <option value="Stable">Stable</option>
             <option value="Critical">Critical</option>
